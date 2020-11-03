@@ -1,0 +1,8 @@
+<%= form_for(@signup) do |f| %>
+    Camper: <%= f.collection_select :camper_id, Camper.all, :id, :name %><br>
+    Activity: <%= f.collection_select :activity_id, Activity.all, :id, :name %><br>
+    <%= f.label :time %><br>
+    <%= f.number_field :time %><br><br>
+
+    <%= f.submit %>
+<% end %>
